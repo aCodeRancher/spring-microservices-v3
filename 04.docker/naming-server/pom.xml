@@ -65,14 +65,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
+			   <configuration>
 					<image>
-						<name>in28min/mmv3-${project.artifactId}:${project.version}</name>
+						<name>helenma33/mmv3-${project.artifactId}:${project.version}</name>
+					    <env>
+							<BP_JVM_VERSION>${java.version}</BP_JVM_VERSION>
+						</env>
 					</image>
-					<pullPolicy>IF_NOT_PRESENT</pullPolicy>
+				  <pullPolicy>IF_NOT_PRESENT</pullPolicy>
 				</configuration>				
 			</plugin>
-		</plugins>
+		 </plugins>
 	</build>
 
 	<repositories>
